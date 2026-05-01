@@ -1,0 +1,19 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- checkout: self
+
+- script: echo "Pipeline started"
+  displayName: "Start"
+
+- script: |
+    python --version
+  displayName: "Check Python"
+
+- script: |
+    echo "Build successful"
+  displayName: "Build"
